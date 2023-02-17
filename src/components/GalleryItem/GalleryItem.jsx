@@ -1,7 +1,17 @@
+import './GalleryItem.css'
 
-function GalleryItem({getItems, GalleryItem}) {
+function GalleryItem({getItems, galleryItem}) {
+    
+    const likeItem(e) => {
+        const id = e.target.value
+    }
+    
     return(
-        console.log('hi')
+        <div> 
+            <img className="image" src={galleryItem.path}/>
+            <button>💖</button>
+        </div>
+
     )
 }
 

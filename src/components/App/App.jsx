@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from "react";
 import Header from '../Header/Header';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
   const getItems = () => {
     axios.get("/gallery")
     .then((response) => {
-      setGalleryList()
+      setGalleryList(response.data);
     })
     .catch((err) => {
       alert("Error getting items");

@@ -1,10 +1,10 @@
-import GalleryItem from '..Gallery Item/GalleryItem'
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({getItems, galleryList}){
     return (
         <>
-        {galleryList.map((item) => {
-            return <GalleryItem key={item.id} getItems={getItems} galleryItem={galleryIitem}/>
+        {galleryList.map((galleryItem) => {
+            return <GalleryItem key={galleryItem.id} getItems={getItems} galleryItem={galleryItem}/>
         })}
         </>
     )

@@ -2,17 +2,33 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from "react";
+import Header from '../Header/Header';
 
 function App() {
 
+  const [galleryList, setGalleryList] = useState([]);
 
-  axios.get
+  //on load, get items
+	useEffect(() => {
+		getItems();
+	}, []);
+
+  getItems() {
+    axios.get("/gallery")
+    .then((response) => {
+      setGalleryList()
+    })
+    .catch((err) => {
+      alert("Error getting items");
+      console.log(err);
+    }); 
+    
+  }
+
 
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
+       <Header />
         <p>Gallery goes here</p>
         <img src="images/goat_small.jpg"/>
       </div>

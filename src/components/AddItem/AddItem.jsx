@@ -43,7 +43,7 @@ function AddItem ({getItems}) {
 				value={descriptionInput}
 				placeholder="Describe your photo"
 			/>
-            <Button color="secondary" variant="contained" type="submit">Submit</Button>
+            <Button size="small" color="secondary" variant="contained" type="submit">Submit</Button>
 
         </form>
     )

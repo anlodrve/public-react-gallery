@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .App-header {
@@ -13,10 +14,6 @@
   font-size: 1.5em;
 }
 
-.App{
-  flex-direction: column;
-  justify-content: center;
-}
 
 body{
   background-color: rgb(255, 192, 254);

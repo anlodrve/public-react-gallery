@@ -34,7 +34,7 @@ function GalleryItem({getItems, galleryItem}) {
                 {isClicked ? <div>{galleryItem.description}</div> :  <img src={galleryItem.path}/>}
                 </div>
                 <div className='likesContainer'>
-                    <Button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</Button>
+                    <Button variant="outlined" color="secondary" className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</Button>
                     <p className='numberOfLikes'>{galleryItem.likes} likes</p>
                 </div>
             </div>

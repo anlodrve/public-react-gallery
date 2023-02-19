@@ -5,6 +5,25 @@ const pool = require('../modules/pool.js');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
+//DELETE route
+router.delete('/:id', (req, res) => {
+    const sqlText = `
+    DELETE from "gallery"
+    WHERE "id"= $1`;
+
+    const sqlParams = [req.params.id]
+
+    pool.query(sqlText, sqlParams)
+    .then(() => {
+        res.sendStatus(204); 
+    })
+    .catch((err) => {
+        console.log('Error in delete', err);
+        res.sendStatus(500); 
+    })
+});
+
+
 //POST Route
 router.post('/', (req, res) => {
     const item = req.body;

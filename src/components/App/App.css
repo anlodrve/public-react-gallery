@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #ffb01d;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
@@ -16,4 +16,8 @@
 .App{
   flex-direction: column;
   justify-content: center;
+}
+
+body{
+  background-color: rgb(255, 192, 254);
 }

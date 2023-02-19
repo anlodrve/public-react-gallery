@@ -1,7 +1,7 @@
 import './GalleryItem.css';
 import axios from 'axios';
 import { useState } from 'react';
-import { Button } from '@mui/material';
+import { Box, ImageListItem, ImageListItemBar, IconButton } from '@mui/material';
 
 function GalleryItem({getItems, galleryItem}) {
     
@@ -28,17 +28,27 @@ function GalleryItem({getItems, galleryItem}) {
     }
 
     return(
-        <div className="outerContainer"> 
-            <div className="internalContainer">
-                <div className='imageContainer' onClick={handleClick}>
-                {isClicked ? <div>{galleryItem.description}</div> :  <img src={galleryItem.path}/>}
-                </div>
-                <div className='likesContainer'>
-                    <Button variant="outlined" color="secondary" className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</Button>
-                    <p className='numberOfLikes'>{galleryItem.likes} likes</p>
-                </div>
-            </div>
-        </div>
+        <Box className="outerContainer"> 
+                <ImageListItem>
+                <Box onClick={handleClick} >
+                {isClicked ? <div>{galleryItem.description}</div> 
+                :  <img src={`${galleryItem.path}?w=248&fit=crop&auto=format`}
+                    srcSet={`${galleryItem.path}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={galleryItem.description}
+                    />}
+                </Box>
+                    <ImageListItemBar 
+                        position="below" 
+                        actionIcon={
+                            <IconButton value={galleryItem.id} onClick={(e) => likeItem(e)}>
+                                💖
+                            </IconButton>
+                        }
+                        actionPosition="left"
+                        title={`${galleryItem.likes} likes`}
+                    />
+            </ImageListItem>
+        </Box>
 
     )
 }

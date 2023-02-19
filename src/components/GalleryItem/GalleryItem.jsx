@@ -29,14 +29,13 @@ function GalleryItem({getItems, galleryItem}) {
 
     return(
         <Box className="outerContainer"> 
-                <ImageListItem>
-                <Box onClick={handleClick} >
+                <ImageListItem onClick={handleClick} >
                 {isClicked ? <div>{galleryItem.description}</div> 
                 :  <img src={`${galleryItem.path}?w=248&fit=crop&auto=format`}
                     srcSet={`${galleryItem.path}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={galleryItem.description}
                     />}
-                </Box>
+                 </ImageListItem>
                     <ImageListItemBar 
                         position="below" 
                         actionIcon={
@@ -47,7 +46,7 @@ function GalleryItem({getItems, galleryItem}) {
                         actionPosition="left"
                         title={`${galleryItem.likes} likes`}
                     />
-            </ImageListItem>
+           
         </Box>
 
     )

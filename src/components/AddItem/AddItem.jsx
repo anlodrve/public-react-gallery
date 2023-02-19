@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { Button } from '@mui/material';
+import './AddItem.css';
 
 function AddItem ({getItems}) {
     const [pathInput, setPathInput] = useState("");
@@ -29,7 +30,7 @@ function AddItem ({getItems}) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h2>Submit a Photo</h2>
+            <h3>Submit a Photo</h3>
             <input
             	onChange={(e) => setPathInput(e.target.value)}
 				type="text"

@@ -1,6 +1,7 @@
 import './GalleryItem.css';
 import axios from 'axios';
 import { useState } from 'react';
+import { Button } from '@mui/material';
 
 function GalleryItem({getItems, galleryItem}) {
     
@@ -25,34 +26,6 @@ function GalleryItem({getItems, galleryItem}) {
         setIsClicked(!isClicked)
 
     }
-    // const showText = () => {
-    //     if(isClicked == true){
-    //         return(
-    //             <div className="photoContainer"> 
-    //             <div className="internalContainer">
-    //                 <img onClick={handleClick()} className="image" src={galleryItem.path}/>
-    //                 <div className='likesContainer'>
-    //                     <button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</button>
-    //                     <p className='numberOfLikes'>{galleryItem.likes} likes</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         )
-    //     }
-    //     else{
-    //         return(
-    //             <div className="photoContainer"> 
-    //             <div className="internalContainer">
-    //                 <div>{galleryItem.description}</div>
-    //                 <div className='likesContainer'>
-    //                     <button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</button>
-    //                     <p className='numberOfLikes'>{galleryItem.likes} likes</p>
-    //                 </div>
-    //             </div>
-    //         </div>      
-    //         )
-    //     }
-    //  }
 
     return(
         <div className="outerContainer"> 
@@ -61,7 +34,7 @@ function GalleryItem({getItems, galleryItem}) {
                 {isClicked ? <div>{galleryItem.description}</div> :  <img src={galleryItem.path}/>}
                 </div>
                 <div className='likesContainer'>
-                    <button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</button>
+                    <Button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</Button>
                     <p className='numberOfLikes'>{galleryItem.likes} likes</p>
                 </div>
             </div>

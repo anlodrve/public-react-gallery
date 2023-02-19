@@ -4,6 +4,7 @@ import axios from 'axios';
 import {useState, useEffect} from "react";
 import Header from '../Header/Header';
 import GalleryList from '../GalleryList/GalleryList';
+import AddItem from '../AddItem/AddItem';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     return (
       <div className="App">
        <Header />
+       <AddItem getItems={getItems} />
        <GalleryList getItems={getItems} galleryList={galleryList}/> 
       </div>
     );

@@ -31,8 +31,6 @@ function App() {
       <div className="App">
        <Header />
        <GalleryList getItems={getItems} galleryList={galleryList}/> 
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
       </div>
     );
 }

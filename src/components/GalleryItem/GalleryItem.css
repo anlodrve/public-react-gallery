@@ -1,4 +1,47 @@
-.image{
+.outerContainer{
+    width: 500px;
+    height: 500px; 
+    border: 10px solid;
+    border-color: hotpink; 
+    margin: 20px; 
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.internalContainer{
     width: 400px;
     height: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.imageContainer{
+    width: 400px;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; 
+}
+
+.likeButton{
+    width: 50px; 
+    height: 50px; 
+}
+
+.numberOfLikes{
+    padding-left: 20px;
+}
+
+.likesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid; 
+    width: 200px; 
+    height: 50px;
+    justify-content: center;
+    padding: 10px; 
 }

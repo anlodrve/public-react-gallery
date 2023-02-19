@@ -12,6 +12,7 @@ function AddItem ({getItems}) {
         const newItem = {
             path: pathInput, 
             description: descriptionInput,
+            likes: 0
         };
 
         axios.post("/gallery", newItem)

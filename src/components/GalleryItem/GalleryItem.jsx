@@ -1,6 +1,7 @@
 import './GalleryItem.css';
 import axios from 'axios';
 import { useState } from 'react';
+import { Box, ImageListItem, ImageListItemBar, IconButton } from '@mui/material';
 
 function GalleryItem({getItems, galleryItem}) {
     
@@ -25,47 +26,28 @@ function GalleryItem({getItems, galleryItem}) {
         setIsClicked(!isClicked)
 
     }
-    // const showText = () => {
-    //     if(isClicked == true){
-    //         return(
-    //             <div className="photoContainer"> 
-    //             <div className="internalContainer">
-    //                 <img onClick={handleClick()} className="image" src={galleryItem.path}/>
-    //                 <div className='likesContainer'>
-    //                     <button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</button>
-    //                     <p className='numberOfLikes'>{galleryItem.likes} likes</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         )
-    //     }
-    //     else{
-    //         return(
-    //             <div className="photoContainer"> 
-    //             <div className="internalContainer">
-    //                 <div>{galleryItem.description}</div>
-    //                 <div className='likesContainer'>
-    //                     <button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</button>
-    //                     <p className='numberOfLikes'>{galleryItem.likes} likes</p>
-    //                 </div>
-    //             </div>
-    //         </div>      
-    //         )
-    //     }
-    //  }
 
     return(
-        <div className="outerContainer"> 
-            <div className="internalContainer">
-                <div className='imageContainer' onClick={handleClick}>
-                {isClicked ? <div>{galleryItem.description}</div> :  <img src={galleryItem.path}/>}
-                </div>
-                <div className='likesContainer'>
-                    <button className='likeButton' value={galleryItem.id} onClick={(e) => likeItem(e)}>💖</button>
-                    <p className='numberOfLikes'>{galleryItem.likes} likes</p>
-                </div>
-            </div>
-        </div>
+        <Box className="outerContainer"> 
+                <ImageListItem onClick={handleClick} >
+                {isClicked ? <div>{galleryItem.description}</div> 
+                :  <img src={`${galleryItem.path}?w=248&fit=crop&auto=format`}
+                    srcSet={`${galleryItem.path}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={galleryItem.description}
+                    />}
+                 </ImageListItem>
+                    <ImageListItemBar 
+                        position="below" 
+                        actionIcon={
+                            <IconButton value={galleryItem.id} onClick={(e) => likeItem(e)}>
+                                💖
+                            </IconButton>
+                        }
+                        actionPosition="left"
+                        title={`${galleryItem.likes} likes`}
+                    />
+           
+        </Box>
 
     )
 }

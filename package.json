@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.9",
     "@mui/system": "^5.11.9",
     "axios": "^0.19.2",
     "express": "^4.17.1",

@@ -4,7 +4,7 @@
 
 _Duration: 2 Day Sprint_
 
-This is a gallery of photos about my life. Users can  like photos and click on each photo to show photo descriptions. 
+This is a gallery of photos about my life. Users can like photos and click on each photo to show photo descriptions. 
 
 ---
 ## **TABLE OF CONTENTS:**
@@ -16,7 +16,7 @@ This is a gallery of photos about my life. Users can  like photos and click on e
 1. Contact
 
 ## Deployed link
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
+To see the fully functional site, please visit: [coming soon](www.heroku.com)
 
 
 ## Prerequisites

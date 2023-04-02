@@ -21,8 +21,6 @@ function GalleryItem({getItems, galleryItem}) {
 
     const [isClicked, setIsClicked] = useState(false)
     console.log(isClicked)
-
- 
     
     const handleClick = () => {
         setIsClicked(!isClicked)
@@ -30,8 +28,9 @@ function GalleryItem({getItems, galleryItem}) {
     }
 
 
-    const deleteItem = (e) => {
-        const id = e.target.value
+    const deleteItem = (event) => {
+        console.log(event.target.value);
+        const id = event.target.value
         axios.delete(`/gallery/${id}`)
         .then(() => {
             getItems();
@@ -61,7 +60,7 @@ function GalleryItem({getItems, galleryItem}) {
                         actionPosition="left"
                         title={`${galleryItem.likes} likes`}
                     />
-                    <IconButton sx={{ marginLeft: "120px"}} value={galleryItem.id} onClick={(e) => deleteItem(e)}>
+                    <IconButton sx={{ marginLeft: "120px"}} value={galleryItem.id} onClick={(event) => deleteItem(event)}>
                         <DeleteIcon />
                     </IconButton>
            

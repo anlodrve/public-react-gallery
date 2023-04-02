@@ -36,7 +36,7 @@ To see the fully functional site, please visit: [coming soon](www.heroku.com)
 
 1. When first opening the app, users can view all of the photos in the gallery. Users can use the scroll bar to see all of the photos.
 2. Users can like a photo by clicking on the heart icon.  
-3. Users can click on each photo to see a description. 
+3. Users can toggle between each photo and its description by clicking the photo. 
 4. Users can add a new photo by entering the photo url and a description in the form at the top of the page. The user will see their new photo at the end of the gallery. 
 5. Users can choose to delete a photo by clicking the trash can icon.
 

@@ -4,7 +4,7 @@
 
 _Duration: 2 Day Sprint_
 
-This is a gallery of photos about my life. Users can like photos and click on each photo to show photo descriptions. 
+This is responsive photo gallery, created to practice using React, axios, and a database. Users can like photos and click on each photo to show photo descriptions. 
 
 ---
 ## **TABLE OF CONTENTS:**
